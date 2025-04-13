@@ -1,0 +1,64 @@
+-- Inserting sample data into Categories table
+INSERT INTO Categories (category_name) VALUES
+('Fiction'),
+('Science Fiction'),
+('Mystery'),
+('Thriller'),
+('Romance'),
+('History'),
+('Biography'),
+('Cookbook'),
+('Travel'),
+('Poetry');
+
+-- Inserting sample data into Students table
+INSERT INTO Students (student_name, department, enrollment_year) VALUES
+('Alice Wonderland', 'Computer Science', 2021),
+('Bob The Builder', 'Engineering', 2022),
+('Charlie Chaplin', 'Arts', 2023),
+('David Copperfield', 'Magic', 2020),
+('Emily Dickinson', 'Literature', 2021),
+('Frankenstein', 'Science', 2022),
+('Greta Garbo', 'Drama', 2023),
+('Harry Houdini', 'Escape', 2020),
+('Jane Austen', 'Literature', 2021),
+(' жил', 'Physics', 2022);
+
+-- Inserting sample data into book_list table
+INSERT INTO book_list (book_id, book_name, author, edition, price, qty, category_id) VALUES
+('ISBN001', 'The Lord of the Rings', 'J.R.R. Tolkien', 'Extended', 30, 5, 1),
+('ISBN002', 'Foundation', 'Isaac Asimov', 'First', 25, 3, 2),
+('ISBN003', 'Gone Girl', 'Gillian Flynn', 'Hardcover', 28, 2, 3),
+('ISBN004', 'The Girl on the Train', 'Paula Hawkins', 'Paperback', 15, 4, 4),
+('ISBN005', 'Pride and Prejudice', 'Jane Austen', 'Collector\'s', 20, 6, 5),
+('ISBN006', 'A Brief History of Time', 'Stephen Hawking', 'Anniversary', 22, 2, 6),
+('ISBN007', 'Steve Jobs', 'Walter Isaacson', 'First', 35, 3, 7),
+('ISBN008', 'Mastering the Art of French Cooking', 'Julia Child', 'Revised', 26, 5, 8),
+('ISBN009', 'Into the Wild', 'Jon Krakauer', 'First', 18, 2, 9),
+('ISBN010', 'The Raven', 'Edgar Allan Poe', 'Illustrated', 12, 4, 10);
+
+-- Inserting sample data into borrow_record table
+INSERT INTO borrow_record (book_id, student_id, issue_date, return_date) VALUES
+('ISBN001', 1, '2024-01-15', '2024-01-29'),
+('ISBN002', 2, '2024-01-20', '2024-02-03'),
+('ISBN003', 3, '2024-01-25', '2024-02-08'),
+('ISBN004', 4, '2024-01-30', '2024-02-13'),
+('ISBN005', 5, '2024-02-01', '2024-02-15'),
+('ISBN006', 6, '2024-02-05', '2024-02-19'),
+('ISBN007', 7, '2024-02-10', '2024-02-24'),
+('ISBN008', 8, '2024-02-15', '2024-03-01'),
+('ISBN009', 9, '2024-02-20', '2024-03-06'),
+('ISBN010', 10, '2024-02-25', '2024-03-10');
+
+-- Inserting sample data into Fines table
+INSERT INTO Fines (student_id, book_id, fine_amount, fine_date, payment_status) VALUES
+(1, 'ISBN001', 5.00, '2024-01-29', 'Unpaid'),
+(2, 'ISBN002', 2.50, '2024-02-05', 'Paid'),
+(3, 'ISBN003', 10.00, '2024-02-10', 'Unpaid'),
+(4, 'ISBN004', 1.00, '2024-02-15', 'Paid'),
+(5, 'ISBN005', 7.50, '2024-02-20', 'Unpaid'),
+(6, 'ISBN006', 3.00, '2024-02-25', 'Paid'),
+(7, 'ISBN007', 6.00, '2024-03-01', 'Unpaid'),
+(8, 'ISBN008', 4.00, '2024-03-05', 'Paid'),
+(9, 'ISBN009', 8.00, '2024-03-10', 'Unpaid'),
+(10, 'ISBN010', 2.00, '2024-03-15', 'Paid');
